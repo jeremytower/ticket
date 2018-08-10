@@ -1,0 +1,33 @@
+<!--
+  Generated template for the TicketDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="dark">
+        <ion-title>Ticket<span class="Dom">Dominator</span></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            {{ticketDetails.Title}}
+        </ion-card-header>
+        <ion-card-content>
+            {{ticketDetails.Type}}<br />
+            {{ticketDetails.Date}}<br />
+            ${{ticketDetails.Price}}<br />
+            <p *ngIf="ticketDetails.Seating == true"> Seat:{{ticketDetails.Seat}}<br /></p>
+            {{ticketDetails.Venue}}<br />
+            {{ticketDetails.City}}, {{ticketDetails.State}}<br />
+        </ion-card-content>
+        <button ion-button id="addButton" (click)="goToAddToCartPage(ticketDetails)">Add To Cart</button>
+    </ion-card>
+
+    
+</ion-content>

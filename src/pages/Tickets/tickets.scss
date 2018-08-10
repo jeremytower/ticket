@@ -1,0 +1,22 @@
+page-tickets {
+    ion-card{
+        padding: 20px;
+    }
+
+    ion-icon{
+        position: absolute;
+     top: 6%;
+     left: 5%;
+     z-index:8;
+    }
+
+    #search{
+        //margin-left: 20px !important;
+       // margin-top: 10px !important;
+       position: absolute !important;
+       top: 2.5%;
+       left: 70%;
+       z-index: 7;
+    }
+}
+

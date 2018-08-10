@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>Ticket<span class="Dom">Dominator</span></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+    <ion-item-sliding *ngFor="let ticket of cartItems; let ticketId = index">
+        <ion-item>
+            {{ticket.Title}}<br />
+            {{ticket.Date}}<br />
+            {{ticket.City}}, {{ticket.State}}<br />
+            Price: ${{ticket.Price}}<br />
+            Quantity: {{ticket.Quantity}}<br />
+            Total: ${{ticket.Total}}<br />
+            Id: {{ticketId}}
+
+
+
+        </ion-item>
+        <ion-item-options side="right">
+            <button color="danger" ion-button (click)="removeItem(ticketId)">
+                <ion-icon name="trash">
+
+                </ion-icon>
+            </button>
+        </ion-item-options>
+           
+    </ion-item-sliding>
+    </ion-list>
+    <p id="slide_info">*Slide items to remove from list</p>
+    <p>Total: ${{orderTotal}}</p>
+    <button ion-button (click)="submitOrder()" full>Submit Order  <ion-icon name="cash"></ion-icon></button>
+    <button color="danger" ion-button (click)="removeAllItems()" full>Clear Cart  <ion-icon name="trash"></ion-icon></button>
+    
+</ion-content>
